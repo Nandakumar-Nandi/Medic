@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.medic.Buyer.Home;
 import com.example.medic.R;
+import com.example.medic.Seller.seller_home;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -47,7 +48,7 @@ public class   usertype extends AppCompatActivity {
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 ds=task.getResult();
                 if(ds.exists()){
-                    startActivity(new Intent(usertype.this,Home.class));
+                    startActivity(new Intent(usertype.this, seller_home.class));
                 }
             }
         });
