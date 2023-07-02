@@ -67,9 +67,9 @@ public class order_adapter extends RecyclerView.Adapter<order_adapter.viewholder
         ImageView img;
         public viewholder(@NonNull View itemView) {
             super(itemView);
-            title=itemView.findViewById(R.id.user_product_name);
-            amount=itemView.findViewById(R.id.user_product_price);
-            date=itemView.findViewById(R.id.user_product_stock);
+            title=itemView.findViewById(R.id.seller_product_name);
+            amount=itemView.findViewById(R.id.seller_product_price);
+            date=itemView.findViewById(R.id.seller_pending_verification_count);
             status=itemView.findViewById(R.id.user_product_status_count);
             img=itemView.findViewById(R.id.user_product_image);
             layout=itemView.findViewById(R.id.order_layout);

@@ -17,7 +17,7 @@
 
 
         <ImageView
-            android:id="@+id/user_product_image"
+            android:id="@+id/seller_home_product_image"
             android:layout_width="130dp"
             android:layout_height="130dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -69,77 +69,31 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="32dp"
             android:padding="2dp"
-            android:text="Pending Verifications :"
+            android:text="Pending Verifications "
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/seller_product_name"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.62"
             app:layout_constraintStart_toStartOf="@+id/seller_product_name"
             app:layout_constraintTop_toBottomOf="@+id/seller_product_price"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/user_product_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
-            android:padding="2dp"
-            android:text="TextView"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView12"
-            app:layout_constraintEnd_toEndOf="@+id/seller_product_name"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/textView12"
-            app:layout_constraintTop_toTopOf="@+id/textView12"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="In-Stock:"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/seller_product_name"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/seller_product_name"
-            app:layout_constraintTop_toBottomOf="@+id/textView12"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.529" />
 
         <TextView
             android:id="@+id/seller_pending_verification_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_marginTop="6dp"
+            android:text="20"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView13"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/textView13"
-            app:layout_constraintTop_toTopOf="@+id/textView13"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/user_product_delete"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:elevation="2dp"
-            android:tint="@color/red"
-            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            app:srcCompat="@drawable/ic_baseline_delete_24" />
+            app:layout_constraintEnd_toEndOf="@+id/textView12"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

@@ -27,4 +27,9 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+    <style name="TextInputLayout.Custom" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="borderRound">20dp</item>
+        <item name="boxStrokeColor">@color/purple_200</item>
+        <item name="boxStrokeWidth">3dp</item>
+    </style>
 </resources>

@@ -92,6 +92,7 @@ public class login extends AppCompatActivity {
                      @Override
                      public void onComplete(@NonNull Task<AuthResult> task) {
                          if(task.isSuccessful()){
+                             mUser = mAuth.getCurrentUser();
                              myRef.child("users").child("Buyer").child(mUser.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                                  @Override
                                  public void onComplete(@NonNull Task<DataSnapshot> task){
@@ -126,9 +127,6 @@ public class login extends AppCompatActivity {
             }
         });
         //Checking if user is already logged in
-        if(mAuth.getCurrentUser()!=null){
-            startActivity(new Intent(login.this,Home.class));
-        }
         //End
 
 

@@ -53,6 +53,7 @@ import com.razorpay.PaymentResultListener;
 
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -383,7 +384,8 @@ public class cart extends AppCompatActivity implements PaymentResultListener {
                     ref.child("Orders").child(user.getUid()).child("1").setValue(cartsnapshot.getValue());
                     ref.child("Orders").child(user.getUid()).child("1").child("Total").setValue(Total);
                     Date date=new Date();
-                    ref.child("Orders").child(user.getUid()).child("1").child("Date").setValue(date.toString());
+                    String modifiedDate= new SimpleDateFormat("dd-MM-yyyy").format(date);
+                    ref.child("Orders").child(user.getUid()).child("1").child("Date").setValue(modifiedDate);
                     ref.child("Cart").child(user.getUid()).removeValue();
                     add_prescription(1);
                     Intent i=new Intent(cart.this,review_page.class);
@@ -395,7 +397,8 @@ public class cart extends AppCompatActivity implements PaymentResultListener {
                     ref.child("Orders").child(user.getUid()).child(""+order_count).setValue(cartsnapshot.getValue());
                     ref.child("Orders").child(user.getUid()).child(""+order_count).child("Total").setValue(Total);
                     Date date=new Date();
-                    ref.child("Orders").child(user.getUid()).child(""+order_count).child("Date").setValue(date.toString());
+                    String modifiedDate= new SimpleDateFormat("dd-MM-yyyy").format(date);
+                    ref.child("Orders").child(user.getUid()).child(""+order_count).child("Date").setValue(modifiedDate);
                     ref.child("Cart").child(user.getUid()).removeValue();
                     add_prescription(order_count);
                     Intent i=new Intent(cart.this,review_page.class);
